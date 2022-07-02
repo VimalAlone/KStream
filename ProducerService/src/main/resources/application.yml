@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    producer:     
+      bootstrap-servers: pkc-2396y.us-east-1.aws.confluent.cloud:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+        sasl:
+          jaas:
+            config: org.apache.kafka.common.security.plain.PlainLoginModule   required username='4XDOXRLKIBF2TFM6'   password='1H6ehOSBYMP3kDku1zrWcEGNTzb3vVFgZ1vciNuSLvl8CTzfn0fuEaMsiZsiVAJI';
+          mechanism: PLAIN
+        security:
+          protocol: SASL_SSL

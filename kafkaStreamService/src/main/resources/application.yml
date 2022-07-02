@@ -1,0 +1,12 @@
+spring.cloud.stream:  
+  bindings:
+    order-input-channel:
+      destination: order-topic
+    order-homedelivery-output-channel:
+      destination: homedelivery-topic
+    order-takeaway-output-channel:
+      destination: takeaway-topic
+  kafka:    
+    binder:
+      brokers:
+        - pkc-2396y.us-east-1.aws.confluent.cloud:9092              
